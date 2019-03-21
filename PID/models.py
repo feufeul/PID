@@ -13,4 +13,4 @@ class Place(models.Model):
 
 class Show(models.Model):
     title = models.CharField(max_length=100)
-    place = models.ForeignKey(Place, on_delete=models.CASCADE)
+#    place = models.ForeignKey(Place, on_delete=models.CASCADE)
