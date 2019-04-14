@@ -16,24 +16,8 @@ class Migration(migrations.Migration):
             name='Place',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=100)),
+                ('name', models.CharField(max_length=100))
+                ,
             ],
-        ),
-        migrations.CreateModel(
-            name='Show',
-            fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=100)),
-                ('place', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='PID.Place')),
-            ],
-        ),
-        migrations.CreateModel(
-            name='User',
-            fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=100)),
-                ('email', models.CharField(max_length=100)),
-                ('password', models.CharField(max_length=100)),
-            ],
-        ),
+        )
     ]
