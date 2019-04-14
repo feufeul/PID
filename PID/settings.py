@@ -71,6 +71,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'PID.wsgi.application'
 
+STATIC_URL = '/static/'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
@@ -81,6 +82,9 @@ DATABASES = {
         'NAME': 'PID',
         'USER': 'root',
         'PASSWORD': '',
+        'OPTIONS': {
+            'sql_mode': 'traditional',
+        }
     }
 }
 
