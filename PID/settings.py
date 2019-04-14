@@ -82,6 +82,9 @@ DATABASES = {
         'NAME': 'PID',
         'USER': 'root',
         'PASSWORD': '',
+        'OPTIONS': {
+            'sql_mode': 'traditional',
+        }
     }
 }
 
