@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.urls import path
 
+from PID import views
 from .views import HomePageView
 
 urlpatterns = [
     path('', HomePageView.as_view(), name='home'),
+    path('datetime/', views.current_datetime),
 ]
