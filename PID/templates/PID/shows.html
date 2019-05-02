@@ -39,59 +39,19 @@
         </thead>
         </thead>
         <tbody>
-            {% for key in info %}
+
+            {% for item in info %}
                 <tr>
-                    {% for value in info.1 %}
-                        <th scope="row">{{ value }}</th>
-                    {% endfor %}
+                    <th scope="row">{{ item.title }}</th>
+                    <th scope="row">{{ item.price }}</th>
+                    <th scope="row">{% if item.bookable == 1 %}
+                            Bookable
+                        {% else %}
+                            Sold out
+                        {% endif %}
+                    </th>
                 </tr>
             {% endfor %}
-{#            <tr>#}
-{#                {% for value in info.2 %}#}
-{#                    <th scope="row">{{ value }}</th>#}
-{#                {% endfor %}#}
-{#            </tr>#}
-{#            <tr>#}
-{#                    {% for item in prices %}#}
-{#                        <th scope="row">{{ item }}</th>#}
-{#                    {% endfor %}#}
-{##}
-{#            </tr>#}
-{#            <tr>#}
-{#                    {% for item in bookables %}#}
-{#                        <th scope="row">#}
-{#                        {% if item == 1 %}#}
-{#                            Bookable#}
-{#                        {% else %}#}
-{#                            Sold out#}
-{#                        {% endif %}#}
-{#                        </th>#}
-{#                    {% endfor %}#}
-{##}
-{#            </tr>#}
-
-
-
-{#            <div class="col-sm-3">#}
-{#                {% for e in urls %}#}
-{#                {{ e }}#}
-{#                {% endfor %}#}
-{#            </div>#}
-{#            <div class="col-sm-3">#}
-{#                {% for e in prices %}#}
-{#                {{ e }}#}
-{#                {% endfor %}#}
-{#            </div>#}
-{#            <div class="col-sm-3">#}
-{#                {% for e in bookables %}#}
-{##}
-{#                    {% if e == 1 %}#}
-{#                        Bookable#}
-{#                    {% else %}#}
-{#                        Sold out#}
-{#                    {% endif %}#}
-{#                {% endfor %}#}
-{#            </div>#}
         </tbody>
     </table>
 {% endblock %}

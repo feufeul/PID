@@ -3,8 +3,8 @@
     <h3 class="row align-items-center justify-content-center">Users from the database</h3>
     <div class="row align-items-center justify-content-center">
         <ul class="list-group col-md-6">
-            {% for e in list %}
-            <li class="list-group-item " style="text-align: center">{{ e }}</li>
+            {% for item in list %}
+                <li class="list-group-item " style="text-align: center">{{ item.login }}</li>
             {% endfor %}
         </ul>
     </div>
