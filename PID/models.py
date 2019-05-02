@@ -34,9 +34,11 @@ class Location(models.Model):
 class Show(models.Model):
     # primary key slug
     title = models.CharField(max_length=255)
+    # TODO posteUrl -> poster_url
     posteUrl = models.CharField(max_length=255)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     bookable = models.SmallIntegerField()
+    # TODO locationId -> location_id
     locationId = models.ManyToManyField(Location, related_name='show', blank=True)
 
 

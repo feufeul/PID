@@ -20,5 +20,6 @@ from .views import HomePageView
 
 urlpatterns = [
     path('', HomePageView.as_view(), name='home'),
-    path('datetime/', views.current_datetime),
+    path('users/', views.get_users_name, name='users'),
+    path('shows/', views.get_shows, name='shows'),
 ]
