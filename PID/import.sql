@@ -13,7 +13,7 @@ INSERT INTO PID_role(id, role) values
 
 INSERT INTO PID_user(login, password, firstname, lastname, email, langue, roleId_id) values
     ("Johnny", "banane", "", "", "", "", 2),
-    ("Feul", "test", "", "", "", "", 2),
     ("Admin", "admin", "", "", "", "", 2),
+    ("Feul", "test", "", "", "", "", 2),
     ("Romeo", "Juliette", "", "", "", "", 2)
                                                               ;
