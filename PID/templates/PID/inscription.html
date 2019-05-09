@@ -5,6 +5,7 @@
         <div class="container col-md-4">
             {% csrf_token %}
             {{ form|crispy }}
+            {{ profile_form|crispy }}
             {{ field }}
             <br>
             <button type="submit" class="btn btn-primary col-md-12" value="submit">REGISTER</button>

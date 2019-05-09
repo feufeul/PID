@@ -2,10 +2,40 @@
 {% block content %}
     <h3 class="row align-items-center justify-content-center">Users from the database</h3>
     <div class="row align-items-center justify-content-center">
-        <ul class="list-group col-md-6">
-            {% for item in list %}
-                <li class="list-group-item " style="text-align: center">{{ item.login }}</li>
-            {% endfor %}
-        </ul>
+{#        <ul class="list-group col-md-6">#}
+{#            {% for item in list %}#}
+{#                <li class="list-group-item " style="text-align: center">#}
+{#                    {{ item.username }}#}
+{#                </li>#}
+{#            {% endfor %}#}
+{#        </ul>#}
+        <table class="table-bordered col-md-6">
+            <thead>
+                    <tr>
+                        <th scope="col">Login</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Role</th>
+                    </tr>
+            </thead>
+            <tbody>
+                {% for item in list %}
+                    <tr>
+                        <th scope="row">
+                            {{ item.username }}
+                        </th>
+                        <th scope="row">
+                            {{ item.email }}
+                        </th>
+                        <th scope="row">
+                            {% if item.is_superuser %}
+                                ADMIN
+                            {% else %}
+                                USER
+                            {% endif %}
+                        </th>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
 {% endblock %}
