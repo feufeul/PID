@@ -1,10 +1,11 @@
 from . import models, forms
-from PID.forms import InscriptionForm, LoginForm
-from PID.models import Profile
+from PID.forms import LoginForm
 from django.shortcuts import render
 from django.contrib.auth import authenticate, logout, login
 from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
+import requests
+import json
 
 
 def get_home(request):
@@ -62,6 +63,21 @@ def get_inscription(request):
 		form = forms.InscriptionForm()
 		profile_form = forms.ProfileForm()
 	return render(request, 'PID/inscription.html', {'form': form, 'profile_form': profile_form})
+
+
+def get_api_shows(request):
+	url_begin = "https://www.theatre-contemporain.net/api/spectacles/"
+	url_end = "?k=691202053ce0b5156cc95a44a224c3c300f49f67"
+	if request.method == 'POST':
+		form = forms.SearchForm(request.POST)
+		if form.is_valid():
+			req = requests.get(url_begin + form.cleaned_data['show'] + url_end)
+			decoded_json = json.loads(req.text)
+			data = {"items": decoded_json}
+			return render(request, 'PID/api_render.html', data)
+	else:
+		form = forms.SearchForm()
+	return render(request, 'PID/api_shows.html', {'form': form})
 
 
 def get_disconnect(request):

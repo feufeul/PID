@@ -24,3 +24,7 @@ class LoginForm(forms.Form):
 #
 class ProfileForm(forms.Form):
 	language = forms.CharField(max_length=100)
+
+
+class SearchForm(forms.Form):
+	show = forms.CharField(max_length=1000)

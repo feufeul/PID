@@ -1,0 +1,12 @@
+{% extends "PID/base.html" %}
+{% block content %}
+        {% for item in items %}
+            <div class="container col-md-10">
+                <h2 class="col-md-12">{{ item.title}}</h2>
+                <image class="col-md-8" src="{{ item.poster }}"></image>
+                <div class="col-md-12"><p>Ce spectacle sera donné le {{ item.near_dates.start }} à {{ item.near_dates.city }}</p></div>
+            </div>
+        {% empty %}
+            <p>Désolé nous n'avons trouvé aucun enregistrement pour votre recherche</p>
+        {% endfor %}
+{% endblock %}

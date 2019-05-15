@@ -25,4 +25,6 @@ urlpatterns = [
     path('inscription/', views.get_inscription, name='inscription'),
     path('accounts/', include('django.contrib.auth.urls')),
     path('admin/', admin.site.urls),
+    path('api_shows/', views.get_api_shows, name='api_shows'),
+    path('api_render/', views.get_api_shows, name='api_render'),
 ]
