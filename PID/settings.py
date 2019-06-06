@@ -14,7 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+AUTH_PROFILE_MODULE = "account.UserProfile"
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'PID.apps.PidConfig',
+    'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -55,8 +56,7 @@ ROOT_URLCONF = 'PID.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
-        ,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -71,6 +71,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'PID.wsgi.application'
 
+STATIC_URL = '/static/'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
@@ -81,6 +82,9 @@ DATABASES = {
         'NAME': 'PID',
         'USER': 'root',
         'PASSWORD': '',
+        'OPTIONS': {
+            'sql_mode': 'traditional',
+        }
     }
 }
 
