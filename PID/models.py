@@ -16,6 +16,10 @@ class Profile(models.Model):
 	language = models.CharField(max_length=60)
 	# role = models.ForeignKey(Role, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return  "Utilisateur : " + self.user + "/n" + 
+                "Langue : " + self.language
+
 
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
@@ -59,6 +63,8 @@ class Localitie(models.Model):
 	# primary key locality
 	# primary key locality_id
 
+    
+
 
 class Location(models.Model):
 	# primary key slug
@@ -67,6 +73,13 @@ class Location(models.Model):
 	website = models.CharField(max_length=255)
 	phone = models.CharField(max_length=30)
 	localityId = models.OneToOneField(Localitie, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return  "ID localité : " + self.localityId + "/n" +
+                "Designation : " + self.designation + "/n" + 
+                "Address : " + self.address + "/n" + 
+                "Site web : " + self.website + "/n" + 
+                "Téléphone : " + self.phone 
 
 
 class Show(models.Model):
@@ -79,11 +92,22 @@ class Show(models.Model):
 	# TODO locationId -> location_id
 	locationId = models.ManyToManyField(Location, related_name='show', blank=True)
 
+    def __str__(self):
+        return  "ID location : " + self.locationId + "/n" +
+                "Titre : " + self.title + "/n" + 
+                "Prix : " + self.price + "/n" + 
+                "Réservation : " + self.bookable
+
 
 class Representation(models.Model):
 	when = models.DateField
 	showId = models.ManyToManyField(Show, related_name='representation', blank=True)
 	locationId = models.ManyToManyField(Location, related_name='representation', blank=True)
+
+    def __str__(self):
+        return  "ID show : " + self.showId + "/n" +
+                "ID location : " + self.locationId + "/n" +
+                "Date : " + self.date
 
 
 class RepresentationUser(models.Model):
@@ -91,21 +115,41 @@ class RepresentationUser(models.Model):
 	representationId = models.ForeignKey(Representation, on_delete=models.CASCADE)
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return  "id : " + self.representationId + "/n" + 
+                "Places : " + self.places + "/n" + 
+                "Utilisateur : " + self.user
+
 
 class Artist(models.Model):
 	firstname = models.CharField(max_length=60)
 	lastname = models.CharField(max_length=60)
 
+    def __str__(self):
+        return  "firstname : " + self.firstname + "/n" + 
+                "lastname : " + self.lastname
+
 
 class Type(models.Model):
 	type = models.CharField(max_length=60)
+
+    def __str__(self):
+        return  "Type : " + self.type
 
 
 class ArtisteType(models.Model):
 	artistId = models.ForeignKey(Artist, on_delete=models.CASCADE)
 	typeId = models.ForeignKey(Type, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return  "ID Artistse : " + self.artisteId + "/n" + 
+                "ID type: " + self.typeId
+
 
 class ArtisteTypeShow(models.Model):
 	artisteTypeId = models.ForeignKey(ArtisteType, on_delete=models.CASCADE)
 	showId = models.ForeignKey(Show, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return  "ID Artistse/Type: " + self.artisteTypeId + "/n" + 
+                "ID show: " + self.showId
