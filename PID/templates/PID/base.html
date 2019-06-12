@@ -37,9 +37,13 @@
             <li class="nav-item active">
                 <a class="nav-link" href="/shows">Show's list</a>
             </li>
+                    {% if user.is_superuser %}
+
             <li class="nav-item active">
                 <a class="nav-link" href="/api_shows">API Show's list</a>
             </li>
+            {% endif %}
+
             {% if user.is_authenticated %}
                 <li class="nav-item active">
                     <a class="nav-link" href="/disconnect">Disconnect</a>
