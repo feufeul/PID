@@ -27,4 +27,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api_shows/', views.get_api_shows, name='api_shows'),
     path('api_render/', views.get_api_shows, name='api_render'),
+    path('category/', views.get_category, name='categorie'),
+    path('category/<int:id>', views.get_category_id),
 ]

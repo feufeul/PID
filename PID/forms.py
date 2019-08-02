@@ -28,3 +28,7 @@ class ProfileForm(forms.Form):
 
 class SearchForm(forms.Form):
 	show = forms.CharField(max_length=1000)
+
+
+class CategoryForm(forms.Form):
+	category = forms.CharField(max_length=10)

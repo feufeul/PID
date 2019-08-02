@@ -69,6 +69,10 @@ class Location(models.Model):
 	localityId = models.OneToOneField(Localitie, on_delete=models.CASCADE)
 
 
+class Category(models.Model):
+	type = models.CharField(max_length=10)
+
+
 class Show(models.Model):
 	# primary key slug
 	title = models.CharField(max_length=255)
@@ -78,6 +82,7 @@ class Show(models.Model):
 	bookable = models.SmallIntegerField()
 	# TODO locationId -> location_id
 	locationId = models.ManyToManyField(Location, related_name='show', blank=True)
+	category_id = models.OneToOneField(Category, default=1 ,on_delete=models.CASCADE)
 
 
 class Representation(models.Model):

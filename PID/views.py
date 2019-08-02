@@ -27,6 +27,8 @@ def get_home(request):
 
 
 def get_users_name(request):
+	if not request.user.is_superuser:
+		return HttpResponseRedirect('/')
 	user_manager = list(User.objects.all())
 	context = {
 		'list': user_manager
@@ -83,3 +85,30 @@ def get_api_shows(request):
 def get_disconnect(request):
 	logout(request)
 	return HttpResponseRedirect('/')
+
+
+def get_category(request):
+	category_manager = list(models.Category.objects.all())
+	show_manager = list(models.Show.objects.all())
+	form = forms.CategoryForm()
+	context = {
+		"cat": category_manager,
+		"show": show_manager,
+		"form": form
+	}
+	if request.method == 'POST':
+		form = forms.CategoryForm(request.POST)
+		if form.is_valid():
+			cat = models.Category()
+			cat.type = form.cleaned_data['type']
+			cat.save()
+			return HttpResponseRedirect('/')
+	return render(request, 'PID/category.html', context)
+
+
+def get_category_id(request, id):
+	show_manager = list(models.Show.objects.all().filter(category_id=id))
+	context = {
+		"show": show_manager
+	}
+	return render(request, 'PID/category2.html', context)
