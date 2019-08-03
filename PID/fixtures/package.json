@@ -1,0 +1,195 @@
+[
+  {
+    "model": "PID.show",
+    "pk": 3,
+    "fields": {
+      "title": "Romeo et Juliette",
+      "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
+      "price": 76,
+      "bookable": true,
+      "category_id": 1
+    }
+  },
+  {
+    "model": "PID.show",
+    "pk": 4,
+    "fields": {
+      "title": "Romeo et Juliette",
+      "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
+      "price": 76,
+      "bookable": true,
+      "category_id": 1
+
+    }
+
+  },
+  {
+    "model": "PID.show",
+    "pk": 5,
+    "fields": {
+      "title": "Romeo et Juliette",
+      "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
+      "price": 76,
+      "bookable": true,
+      "category_id": 1
+
+    }
+
+  },
+  {
+    "model": "PID.show",
+    "pk": 6,
+    "fields": {
+      "title": "Romeo et Juliette",
+      "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
+      "price": 76,
+      "bookable": true,
+      "category_id": 1
+
+    }
+
+  },
+  {
+    "model": "PID.show",
+    "pk": 7,
+    "fields": {
+      "title": "Romeo et Juliette",
+      "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
+      "price": 76,
+      "bookable": true,
+      "category_id": 1
+
+    }
+
+  },
+  {
+    "model": "PID.show",
+    "pk": 8,
+    "fields": {
+      "title": "Romeo et Juliette",
+      "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
+      "price": 76,
+      "bookable": true,
+      "category_id": 1
+
+    }
+
+  },
+  {
+    "model": "PID.show",
+    "pk": 9,
+    "fields": {
+      "title": "Romeo et Juliette",
+      "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
+      "price": 76,
+      "bookable": true,
+      "category_id": 1
+
+    }
+
+  },
+  {
+    "model": "PID.show",
+    "pk": 10,
+    "fields": {
+      "title": "Romeo et Juliette",
+      "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
+      "price": 76,
+      "bookable": true,
+      "category_id": 1
+
+    }
+
+  },
+  {
+    "model": "PID.show",
+    "pk": 11,
+    "fields": {
+      "title": "Romeo et Juliette",
+      "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
+      "price": 76,
+      "bookable": true,
+      "category_id": 1
+
+    }
+
+  },
+  {
+    "model": "PID.show",
+    "pk": 12,
+    "fields": {
+      "title": "Romeo et Juliette",
+      "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
+      "price": 76,
+      "bookable": true,
+      "category_id": 1
+
+    }
+
+  },
+  {
+    "model": "PID.show",
+    "pk": 13,
+    "fields": {
+      "title": "Romeo et Juliette",
+      "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
+      "price": 76,
+      "bookable": true,
+      "category_id": 1
+
+    }
+
+  },
+  {
+    "model": "PID.show",
+    "pk": 14,
+    "fields": {
+      "title": "Romeo et Juliette",
+      "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
+      "price": 76,
+      "bookable": true,
+      "category_id": 1
+
+    }
+
+  },
+  {
+    "model": "PID.show",
+    "pk": 15,
+    "fields": {
+      "title": "Romeo et Juliette",
+      "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
+      "price": 76,
+      "bookable": true,
+      "category_id": 1
+
+    }
+
+  },
+  {
+    "model": "PID.show",
+    "pk": 16,
+    "fields": {
+      "title": "Romeo et Juliette",
+      "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
+      "price": 76,
+      "bookable": true,
+      "category_id": 1
+
+    }
+
+  },
+  {
+    "model": "PID.show",
+    "pk": 17,
+    "fields": {
+      "title": "Romeo et Juliette",
+      "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
+      "price": 76,
+      "bookable": true,
+      "category_id": 1
+
+    }
+
+  }
+]

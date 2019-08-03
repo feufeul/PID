@@ -77,12 +77,12 @@ class Show(models.Model):
 	# primary key slug
 	title = models.CharField(max_length=255)
 	# TODO posteUrl -> poster_url
-	posteUrl = models.CharField(max_length=255)
+	posterUrl = models.CharField(max_length=255)
 	price = models.DecimalField(max_digits=10, decimal_places=2)
 	bookable = models.SmallIntegerField()
 	# TODO locationId -> location_id
-	locationId = models.ManyToManyField(Location, related_name='show', blank=True)
-	category_id = models.OneToOneField(Category, default=1 ,on_delete=models.CASCADE)
+	location_id = models.ManyToManyField(Location, related_name='show', blank=True)
+	category = models.ForeignKey(Category, default=1, on_delete=models.CASCADE)
 
 
 class Representation(models.Model):

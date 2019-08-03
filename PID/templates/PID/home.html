@@ -15,7 +15,21 @@
                     <button type="submit" class="btn btn-primary col-md-12" value="submit">SIGN IN</button>
                 </div>
             </form>
-            <a href="inscription">Not registered yet?</a>
+
+            {% if 'login' in request.GET %}
+                <div class="container col-md-4">
+                    <p class="center" style="color:red">login or password error</p>
+                </div>
+            {% endif %}
+            <div class="container col-md-4">
+                <a href="inscription" class="center">Not registered yet?</a>
+            </div>
+
+        {% endif %}
+        {% if 'unauthorized' in request.GET %}
+            <div class="container col-md-4">
+                <p class="center" style="color:red">You were not authorized to access this page</p>
+            </div>
         {% endif %}
 {#    {% endif %}#}
 

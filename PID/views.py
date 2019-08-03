@@ -15,7 +15,7 @@ def get_home(request):
 			user = authenticate(username=form.cleaned_data['login'], password=form.cleaned_data['password'])
 			if user is not None:
 				login(request, user)
-				return HttpResponseRedirect('/users')
+				return HttpResponseRedirect('/')
 			else:
 				return HttpResponseRedirect('/?login=error')
 		return HttpResponseRedirect('/?login=error2')
@@ -28,7 +28,7 @@ def get_home(request):
 
 def get_users_name(request):
 	if not request.user.is_superuser:
-		return HttpResponseRedirect('/')
+		return HttpResponseRedirect('/?unauthorized=true')
 	user_manager = list(User.objects.all())
 	context = {
 		'list': user_manager
@@ -68,6 +68,8 @@ def get_inscription(request):
 
 
 def get_api_shows(request):
+	if not request.user.is_superuser:
+		return HttpResponseRedirect('/?unauthorized=true')
 	url_begin = "https://www.theatre-contemporain.net/api/spectacles/"
 	url_end = "?k=691202053ce0b5156cc95a44a224c3c300f49f67"
 	if request.method == 'POST':
