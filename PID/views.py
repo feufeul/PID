@@ -4,6 +4,7 @@ from django.shortcuts import render
 from django.contrib.auth import authenticate, logout, login
 from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
+from django.core.paginator import Paginator
 import requests
 import json
 
@@ -38,8 +39,11 @@ def get_users_name(request):
 
 def get_shows(request):
 	show_manager = list(models.Show.objects.all())
+	paginator = Paginator(show_manager, 5)
+	page = request.GET.get('page')
+	shows = paginator.get_page(page)
 	context = {
-		"info": show_manager
+		"info": shows
 	}
 	# if request.session['login']:
 	#     return HttpResponseRedirect('/')
