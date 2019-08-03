@@ -2,10 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.dispatch import receiver
 from django.db.models.signals import post_save
-
-
-# class Role(models.Model):
-# 	role = models.CharField(max_length=30)
+import django_filters
 
 
 class Profile(models.Model):
@@ -83,6 +80,13 @@ class Show(models.Model):
 	# TODO locationId -> location_id
 	location_id = models.ManyToManyField(Location, related_name='show', blank=True)
 	category = models.ForeignKey(Category, default=1, on_delete=models.CASCADE)
+
+#
+# class ShowFilter(django_filters.FilterSet):
+# 	name = django_filters.CharFilter(lookup_expr='iexact')
+#     class Meta:
+#         model = Show
+#         fields = ['price']
 
 
 class Representation(models.Model):

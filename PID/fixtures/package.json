@@ -14,9 +14,9 @@
     "model": "PID.show",
     "pk": 4,
     "fields": {
-      "title": "Romeo et Juliette",
+      "title": "Frankenstein",
       "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
-      "price": 76,
+      "price": 77,
       "bookable": true,
       "category_id": 1
 
@@ -27,9 +27,9 @@
     "model": "PID.show",
     "pk": 5,
     "fields": {
-      "title": "Romeo et Juliette",
+      "title": "Les aliens",
       "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
-      "price": 76,
+      "price": 51,
       "bookable": true,
       "category_id": 1
 
@@ -40,9 +40,9 @@
     "model": "PID.show",
     "pk": 6,
     "fields": {
-      "title": "Romeo et Juliette",
+      "title": "Ma vie",
       "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
-      "price": 76,
+      "price": 666,
       "bookable": true,
       "category_id": 1
 
@@ -53,9 +53,9 @@
     "model": "PID.show",
     "pk": 7,
     "fields": {
-      "title": "Romeo et Juliette",
+      "title": "John Wick",
       "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
-      "price": 76,
+      "price": 12,
       "bookable": true,
       "category_id": 1
 
@@ -66,9 +66,9 @@
     "model": "PID.show",
     "pk": 8,
     "fields": {
-      "title": "Romeo et Juliette",
+      "title": "John Cena",
       "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
-      "price": 76,
+      "price": 99,
       "bookable": true,
       "category_id": 1
 
@@ -79,9 +79,9 @@
     "model": "PID.show",
     "pk": 9,
     "fields": {
-      "title": "Romeo et Juliette",
+      "title": "Disney",
       "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
-      "price": 76,
+      "price": 289,
       "bookable": true,
       "category_id": 1
 
@@ -92,9 +92,9 @@
     "model": "PID.show",
     "pk": 10,
     "fields": {
-      "title": "Romeo et Juliette",
+      "title": "Ici bla bla",
       "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
-      "price": 76,
+      "price": 0,
       "bookable": true,
       "category_id": 1
 
@@ -105,9 +105,9 @@
     "model": "PID.show",
     "pk": 11,
     "fields": {
-      "title": "Romeo et Juliette",
+      "title": "The carpenter",
       "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
-      "price": 76,
+      "price": 67,
       "bookable": true,
       "category_id": 1
 
@@ -118,9 +118,9 @@
     "model": "PID.show",
     "pk": 12,
     "fields": {
-      "title": "Romeo et Juliette",
+      "title": "Sexe et luxure",
       "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
-      "price": 76,
+      "price": 69,
       "bookable": true,
       "category_id": 1
 
@@ -131,9 +131,9 @@
     "model": "PID.show",
     "pk": 13,
     "fields": {
-      "title": "Romeo et Juliette",
+      "title": "Not so funny",
       "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
-      "price": 76,
+      "price": 78,
       "bookable": true,
       "category_id": 1
 
@@ -144,9 +144,9 @@
     "model": "PID.show",
     "pk": 14,
     "fields": {
-      "title": "Romeo et Juliette",
+      "title": "Another seed",
       "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
-      "price": 76,
+      "price": 25,
       "bookable": true,
       "category_id": 1
 
@@ -157,9 +157,9 @@
     "model": "PID.show",
     "pk": 15,
     "fields": {
-      "title": "Romeo et Juliette",
+      "title": "John Doe",
       "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
-      "price": 76,
+      "price": 23,
       "bookable": true,
       "category_id": 1
 
@@ -170,9 +170,9 @@
     "model": "PID.show",
     "pk": 16,
     "fields": {
-      "title": "Romeo et Juliette",
+      "title": "Life is life",
       "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
-      "price": 76,
+      "price": 34,
       "bookable": true,
       "category_id": 1
 
@@ -183,9 +183,9 @@
     "model": "PID.show",
     "pk": 17,
     "fields": {
-      "title": "Romeo et Juliette",
+      "title": "Noway",
       "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
-      "price": 76,
+      "price": 56,
       "bookable": true,
       "category_id": 1
 

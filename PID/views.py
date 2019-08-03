@@ -5,6 +5,8 @@ from django.contrib.auth import authenticate, logout, login
 from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator
+from PID.filter import ShowFilter
+from PID.models import Show
 import requests
 import json
 
@@ -38,15 +40,16 @@ def get_users_name(request):
 
 
 def get_shows(request):
-	show_manager = list(models.Show.objects.all())
+	shows_list = Show.objects.all()
+	filtered = ShowFilter(request.GET, shows_list)
+	show_manager = filtered.qs
 	paginator = Paginator(show_manager, 5)
 	page = request.GET.get('page')
 	shows = paginator.get_page(page)
 	context = {
-		"info": shows
+		"info": shows,
+		"filter": filtered
 	}
-	# if request.session['login']:
-	#     return HttpResponseRedirect('/')
 	return render(request, 'PID/shows.html', context)
 
 
