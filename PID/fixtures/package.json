@@ -120,7 +120,7 @@
     "fields": {
       "title": "Sexe et luxure",
       "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
-      "price": 69,
+      "price": 75,
       "bookable": true,
       "category_id": 1
 
@@ -133,7 +133,7 @@
     "fields": {
       "title": "Not so funny",
       "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
-      "price": 78,
+      "price": 75,
       "bookable": true,
       "category_id": 1
 
@@ -146,7 +146,7 @@
     "fields": {
       "title": "Another seed",
       "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
-      "price": 25,
+      "price": 75,
       "bookable": true,
       "category_id": 1
 
@@ -159,7 +159,7 @@
     "fields": {
       "title": "John Doe",
       "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
-      "price": 23,
+      "price": 75,
       "bookable": true,
       "category_id": 1
 
@@ -172,7 +172,7 @@
     "fields": {
       "title": "Life is life",
       "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
-      "price": 34,
+      "price": 75,
       "bookable": true,
       "category_id": 1
 
@@ -185,7 +185,7 @@
     "fields": {
       "title": "Noway",
       "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
-      "price": 56,
+      "price": 75,
       "bookable": true,
       "category_id": 1
 

@@ -1,0 +1,41 @@
+{% extends "PID/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Username</th>
+                <th scope="col">First name</th>
+                <th scope="col">Last name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Staff?</th>
+                <th scope="col">Date joined</th>
+                <th scope="col">Last login</th>
+            </tr>
+        </thead>
+        {% for user in profiles %}
+            <tbody>
+                <th scope="row">{{ user.username }}</th>
+                <th scope="row">{{ user.first_name }}</th>
+                <th scope="row">{{ user.last_name }}</th>
+                <th scope="row">{{ user.email }}</th>
+                <th scope="row">{{ user.is_staff }}</th>
+                <th scope="row">{{ user.date_joined }}</th>
+                <th scope="row">{{ user.last_login }}</th>
+            </tbody>
+        {% endfor %}
+    </table>
+    <div>
+        <form action="/profile/" method="post">
+        <div class="container col-md-4">
+            {% csrf_token %}
+            {{ form|crispy }}
+            {{ profile_update_form|crispy }}
+            {{ field }}
+            <br>
+            <button type="submit" class="btn btn-primary col-md-12" value="submit">Update</button>
+        </div>
+    </form>
+    </div>
+
+{% endblock %}

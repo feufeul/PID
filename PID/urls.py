@@ -24,13 +24,15 @@ urlpatterns = [
     path('', views.get_home, name='home'),
     path('disconnect/', views.get_disconnect, name='disconnect'),
     path('users/', views.get_users_name, name='users'),
-    path('shows/', views.get_shows, name='shows'),
+    url(r'^shows/', views.get_shows, name='shows'),
+    url(r'^sorted_shows/', views.get_sorted_shows, name='sorted_shows'),
     # path('search_show/', views.get_filtered_shows, name='search_shows'),
     path('inscription/', views.get_inscription, name='inscription'),
-    path('accounts/', include('django.contrib.auth.urls')),
+    # path('accounts/', include('django.contrib.auth.urls')),
     path('admin/', admin.site.urls),
     path('api_shows/', views.get_api_shows, name='api_shows'),
     path('api_render/', views.get_api_shows, name='api_render'),
     path('category/', views.get_category, name='categorie'),
     path('category/<int:id>', views.get_category_id),
+    path('profile/', views.get_profile_id, name='profile')
 ]

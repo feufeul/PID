@@ -7,6 +7,7 @@ from django.contrib.auth.models import User
 from django.core.paginator import Paginator
 from PID.filter import ShowFilter
 from PID.models import Show
+from django.shortcuts import redirect
 import requests
 import json
 
@@ -30,6 +31,8 @@ def get_home(request):
 
 
 def get_users_name(request):
+	if not request.user.is_authenticated:
+		return redirect('/')
 	if not request.user.is_superuser:
 		return HttpResponseRedirect('/?unauthorized=true')
 	user_manager = list(User.objects.all())
@@ -53,7 +56,21 @@ def get_shows(request):
 	return render(request, 'PID/shows.html', context)
 
 
+def get_sorted_shows(request):
+	shows_list = Show.objects.all().order_by(request.GET.get('sort'))
+	show_manager = list(shows_list)
+	paginator = Paginator(show_manager, 5)
+	page = request.GET.get('page')
+	shows = paginator.get_page(page)
+	context = {
+		"info": shows
+	}
+	return render(request, 'PID/sorted_shows.html', context)
+
+
 def get_inscription(request):
+	if not request.user.is_authenticated:
+		return redirect('/')
 	if request.method == 'POST':
 		form = forms.InscriptionForm(request.POST)
 		profile_form = forms.ProfileForm(request.POST)
@@ -75,6 +92,8 @@ def get_inscription(request):
 
 
 def get_api_shows(request):
+	if not request.user.is_authenticated:
+		return redirect('/')
 	if not request.user.is_superuser:
 		return HttpResponseRedirect('/?unauthorized=true')
 	url_begin = "https://www.theatre-contemporain.net/api/spectacles/"
@@ -121,3 +140,28 @@ def get_category_id(request, id):
 		"show": show_manager
 	}
 	return render(request, 'PID/category2.html', context)
+
+
+def get_profile_id(request):
+	if not request.user.is_authenticated:
+		return redirect('/')
+	# print(request.user)
+	if request.method == 'POST':
+		form = forms.ProfileUpdateForm(request.POST)
+		if form.is_valid():
+
+			user = User.objects.get(username=request.user)
+			user.last_name = form.cleaned_data['last_name']
+			user.first_name = form.cleaned_data['first_name']
+			user.set_password(form.cleaned_data['password'])
+			user.email = form.cleaned_data['email']
+			user.save()
+			return HttpResponseRedirect('/')
+	else:
+		form = forms.ProfileUpdateForm()
+		profile_manager = list(models.User.objects.all().filter(username=request.user))
+		context = {
+			"profiles": profile_manager,
+			"form": form
+		}
+	return render(request, 'PID/profile.html', context)
