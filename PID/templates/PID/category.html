@@ -1,0 +1,44 @@
+{% extends "PID/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <h3 class="row align-items-center justify-content-center">Shows</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Category</th>
+                <th scope="col">Show</th>
+                <th scope="col">Price</th>
+                <th scope="col">Bookable</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {% for item in cat %}
+                {% for spectacle in show %}
+                    {% if item.id != spectacle.category_id %}
+                        <tr>
+                            <th scope="row">{{ item.type }}</th>
+                            <th scope="row">{{ spectacle.title }}</th>
+                            <th scope="row">{{ spectacle.price }}</th>
+                            <th scope="row">{% if spectacle.bookable == 1 %}
+                                    Bookable
+                                {% else %}
+                                    Sold out
+                                {% endif %}
+                            </th>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        </tbody>
+    </table>
+        <form action="/category/" method="post">
+            <div class="container col-md-4">
+                {% csrf_token %}
+                {{ form | crispy }}
+                {{ field }}
+                <br>
+                <button type="submit" class="btn btn-primary col-md-12" value="submit">ADD</button>
+            </div>
+        </form>
+{% endblock %}

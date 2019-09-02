@@ -1,0 +1,195 @@
+[
+  {
+    "model": "PID.show",
+    "pk": 3,
+    "fields": {
+      "title": "Romeo et Juliette",
+      "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
+      "price": 76,
+      "bookable": true,
+      "category_id": 1
+    }
+  },
+  {
+    "model": "PID.show",
+    "pk": 4,
+    "fields": {
+      "title": "Frankenstein",
+      "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
+      "price": 77,
+      "bookable": true,
+      "category_id": 1
+
+    }
+
+  },
+  {
+    "model": "PID.show",
+    "pk": 5,
+    "fields": {
+      "title": "Les aliens",
+      "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
+      "price": 51,
+      "bookable": true,
+      "category_id": 1
+
+    }
+
+  },
+  {
+    "model": "PID.show",
+    "pk": 6,
+    "fields": {
+      "title": "Ma vie",
+      "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
+      "price": 666,
+      "bookable": true,
+      "category_id": 1
+
+    }
+
+  },
+  {
+    "model": "PID.show",
+    "pk": 7,
+    "fields": {
+      "title": "John Wick",
+      "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
+      "price": 12,
+      "bookable": true,
+      "category_id": 1
+
+    }
+
+  },
+  {
+    "model": "PID.show",
+    "pk": 8,
+    "fields": {
+      "title": "John Cena",
+      "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
+      "price": 99,
+      "bookable": true,
+      "category_id": 1
+
+    }
+
+  },
+  {
+    "model": "PID.show",
+    "pk": 9,
+    "fields": {
+      "title": "Disney",
+      "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
+      "price": 289,
+      "bookable": true,
+      "category_id": 1
+
+    }
+
+  },
+  {
+    "model": "PID.show",
+    "pk": 10,
+    "fields": {
+      "title": "Ici bla bla",
+      "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
+      "price": 0,
+      "bookable": true,
+      "category_id": 1
+
+    }
+
+  },
+  {
+    "model": "PID.show",
+    "pk": 11,
+    "fields": {
+      "title": "The carpenter",
+      "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
+      "price": 67,
+      "bookable": true,
+      "category_id": 1
+
+    }
+
+  },
+  {
+    "model": "PID.show",
+    "pk": 12,
+    "fields": {
+      "title": "Sexe et luxure",
+      "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
+      "price": 75,
+      "bookable": true,
+      "category_id": 1
+
+    }
+
+  },
+  {
+    "model": "PID.show",
+    "pk": 13,
+    "fields": {
+      "title": "Not so funny",
+      "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
+      "price": 75,
+      "bookable": true,
+      "category_id": 1
+
+    }
+
+  },
+  {
+    "model": "PID.show",
+    "pk": 14,
+    "fields": {
+      "title": "Another seed",
+      "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
+      "price": 75,
+      "bookable": true,
+      "category_id": 1
+
+    }
+
+  },
+  {
+    "model": "PID.show",
+    "pk": 15,
+    "fields": {
+      "title": "John Doe",
+      "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
+      "price": 75,
+      "bookable": true,
+      "category_id": 1
+
+    }
+
+  },
+  {
+    "model": "PID.show",
+    "pk": 16,
+    "fields": {
+      "title": "Life is life",
+      "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
+      "price": 75,
+      "bookable": true,
+      "category_id": 1
+
+    }
+
+  },
+  {
+    "model": "PID.show",
+    "pk": 17,
+    "fields": {
+      "title": "Noway",
+      "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DickseeRomeoandJuliet.jpg/170px-DickseeRomeoandJuliet.jpg",
+      "price": 75,
+      "bookable": true,
+      "category_id": 1
+
+    }
+
+  }
+]
