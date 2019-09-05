@@ -1,4 +1,5 @@
 from django import forms
+from PID.models import Agency
 from django.contrib.auth.models import User
 from PID.models import Profile
 
@@ -39,3 +40,10 @@ class SearchForm(forms.Form):
 
 class CategoryForm(forms.Form):
 	category = forms.CharField(max_length=10)
+
+
+class ArtistForm(forms.Form):
+	firstname = forms.CharField(max_length=100)
+	lastname = forms.CharField(max_length=100)
+	# agency = forms.IntegerField()
+	agency = forms.ModelChoiceField(queryset=Agency.objects.all(), to_field_name="id")

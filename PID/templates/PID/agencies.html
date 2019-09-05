@@ -1,0 +1,22 @@
+{% extends "PID/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+    <h3 class="row align-items-center justify-content-center">Agencies and their artists</h3>
+    <ul>
+        {% for agency in agencies %}
+            <li>
+                {{ agency.name }} <a href="/agencies/{{ agency.id }}"> Show artists</a>
+                <ul>
+                     {% for artist in artists %}
+                         {% if artist.agency.id == agency.id %}
+                             <li>
+                                {{ artist.firstname }} {{ artist.lastname }}
+                            </li>
+                         {% endif %}
+                     {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -34,5 +34,9 @@ urlpatterns = [
     path('api_render/', views.get_api_shows, name='api_render'),
     path('category/', views.get_category, name='categorie'),
     path('category/<int:id>', views.get_category_id),
-    path('profile/', views.get_profile_id, name='profile')
+    path('profile/', views.get_profile_id, name='profile'),
+    path('agencies/', views.get_agencies, name='agencies'),
+    path('agencies/<int:id>', views.get_agencies_by_id, name='agencies'),
+    path('artists/', views.get_artists, name='artists')
+
 ]

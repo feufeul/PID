@@ -6,7 +6,7 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator
 from PID.filter import ShowFilter
-from PID.models import Show
+from PID.models import Show, Agency, Artist
 from django.shortcuts import redirect
 import requests
 import json
@@ -165,3 +165,31 @@ def get_profile_id(request):
 			"form": form
 		}
 	return render(request, 'PID/profile.html', context)
+
+
+def get_agencies(request):
+	agencies = Agency.objects.all()
+	artists = Artist.objects.all()
+	return render(request, 'PID/agencies.html', context={"agencies": agencies, "artists": artists})
+
+
+def get_agencies_by_id(request, id):
+	agency = Agency.objects.get(pk=id)
+	artists = Artist.objects.filter(agency_id=id)
+	return render(request, 'PID/agencies_2.html', context={"agency": agency, "artists": artists})
+
+
+def get_artists(request):
+	artists = Artist.objects.all()
+	form = forms.ArtistForm()
+	context = {"artists": artists, "form": form}
+	if request.method == 'POST':
+		form = forms.ArtistForm(request.POST)
+		if form.is_valid():
+			artist = Artist.objects.create()
+			artist.firstname = form.cleaned_data['firstname']
+			artist.lastname = form.cleaned_data['lastname']
+			artist.agency_id = form.cleaned_data['agency']
+			artist.save()
+			return render(request, 'PID/artists.html', context)
+	return render(request, 'PID/artists.html', context)

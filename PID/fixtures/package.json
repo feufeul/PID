@@ -1,5 +1,12 @@
 [
   {
+    "model": "PID.category",
+    "pk": 1,
+    "fields": {
+      "type": "danse"
+    }
+  },
+  {
     "model": "PID.show",
     "pk": 3,
     "fields": {
@@ -188,8 +195,47 @@
       "price": 75,
       "bookable": true,
       "category_id": 1
-
     }
-
+  },
+  {
+    "model": "PID.agency",
+    "pk": 1,
+    "fields": {
+      "name": "Acting Association"
+    }
+  },
+  {
+    "model": "PID.agency",
+    "pk": 2,
+    "fields": {
+      "name": "New Agency"
+    }
+  },
+  {
+    "model": "PID.artist",
+    "pk": 1,
+    "fields": {
+      "firstname": "Bob",
+      "lastname": "Sull",
+      "agency_id": 1
+    }
+  },
+  {
+    "model": "PID.artist",
+    "pk": 2,
+    "fields": {
+      "firstname": "Lydia",
+      "lastname": "Smith",
+      "agency_id": 1
+    }
+  },
+  {
+    "model": "PID.artist",
+    "pk": 3,
+    "fields": {
+      "firstname": "fred",
+      "lastname": "Durand",
+      "agency_id": 2
+    }
   }
 ]

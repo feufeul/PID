@@ -1,0 +1,12 @@
+{% extends "PID/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <h4>{{ agency.name }}</h4>
+    <li>
+    {% for artist in artists %}
+        <ul>
+            {{ artist.lastname }} {{ artist.firstname }}
+        </ul>
+    {% endfor %}
+    </li>
+{% endblock %}

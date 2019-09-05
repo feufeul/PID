@@ -101,9 +101,22 @@ class RepresentationUser(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
+class Agency(models.Model):
+	name = models.CharField(max_length=100)
+
+	def __str__(self):
+		return self.name
+
+
 class Artist(models.Model):
 	firstname = models.CharField(max_length=60)
 	lastname = models.CharField(max_length=60)
+	agency = models.ForeignKey(Agency, on_delete=models.CASCADE, null=True)
+	# @classmethod
+	# def create(self, firstname, lastname, agency):
+	# 	self.firstname = firstname
+	# 	self.lastname = lastname
+	# 	self.agency = agency
 
 
 class Type(models.Model):

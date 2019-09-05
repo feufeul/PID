@@ -1,0 +1,36 @@
+{% extends "PID/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>firstname</th>
+                <th>lastname</th>
+                <th>agency name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for artist in artists %}
+                <tr>
+                    <th>{{ artist.id }}</th>
+                    <th>{{ artist.firstname }}</th>
+                    <th>{{ artist.lastname }}</th>
+                    <th>{{ artist.agency.name }}</th>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <form action="/artists/" method="post">
+        <div class="container col-md-4">
+            {% csrf_token %}
+            {{ form|crispy }}
+            {{ artist_form|crispy }}
+            {{ field }}
+            <br>
+            <button type="submit" class="btn btn-primary col-md-12" value="submit">REGISTER</button>
+        </div>
+    </form>
+
+{% endblock %}
