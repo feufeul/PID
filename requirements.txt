@@ -1,3 +1,6 @@
 django_filter
 django
-crispy
+django-crispy-forms
+django-mysql
+mysqlclient
+requests
