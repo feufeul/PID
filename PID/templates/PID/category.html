@@ -15,7 +15,7 @@
 
             {% for item in cat %}
                 {% for spectacle in show %}
-                    {% if item.id != spectacle.category_id %}
+                    {% if item.id == spectacle.category_id %}
                         <tr>
                             <th scope="row">{{ item.type }}</th>
                             <th scope="row">{{ spectacle.title }}</th>
